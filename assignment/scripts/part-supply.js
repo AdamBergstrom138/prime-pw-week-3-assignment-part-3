@@ -32,16 +32,44 @@ console.log(supplyChanges);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
-
+for (let i=0; i<supplyChanges.length; i++){
+    if (supplyChanges[i] > 0){
+        console.log('Added', supplyChanges[i], 'parts.');
+    }
+    else if (supplyChanges[i] === 0){
+        console.log('No Change.');
+    } else {
+        supplyChanges[i] *= -1;  //added this line to convert the negitive number to a positive for readability.
+        console.log('Removed', supplyChanges[i], 'parts.');
+        supplyChanges[i] *= -1;  //added this line to convert the new positive number back to its original negative value.
+    }
+}
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
+for (parts of supplyChanges){
+    if (parts > 0){
+        console.log('Added', parts, 'parts.');
+    } else if (parts === 0) {
+        console.log('No Change.');
+    } else {
+        parts *= -1;
+        console.log('Removed', parts, 'parts.');
+        parts *= -1;
+    }
+}
+console.log(supplyChanges);
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+let total = 0;
+for (parts in supplyChanges){
+total += supplyChanges[parts];
+}
+console.log(total);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
@@ -50,3 +78,17 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+let part = 572
+let boxes = 0
+console.log('Parts:', part, 'Boxes:', boxes);
+
+while (part > 0) {
+    if (part > 6) {
+        part - 7;
+        boxes++;
+    } else {
+        break;
+    }
+}
+
+console.log('Parts:', part, 'Boxes:', boxes);
