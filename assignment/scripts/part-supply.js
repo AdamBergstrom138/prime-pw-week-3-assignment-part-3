@@ -20,8 +20,6 @@ console.log('4. Removed item:');
 removedItem = supplyChanges.pop();
 console.log(removedItem);
 
-//console.log(supplyChanges);
-
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
 supplyChanges.push(25);
@@ -78,17 +76,15 @@ console.log(total);
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+
 let part = 572
 let boxes = 0
+
 console.log('Parts:', part, 'Boxes:', boxes);
 
-while (part > 0) {
-    if (part > 6) {
-        part - 7;
+while (part > 6) {
+        part -= 7;
         boxes++;
-    } else {
-        break;
-    }
 }
 
-console.log('Parts:', part, 'Boxes:', boxes);
+console.log('Parts unboxed:', part, 'Boxes filled:', boxes);
