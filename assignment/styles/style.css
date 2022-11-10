@@ -1,1 +1,5 @@
 /* give your assignment a fun background color */
+html {
+    background: rgb(118,233,45);
+    background: linear-gradient(90deg, rgba(118,233,45,1) 0%, rgba(6,234,244,1) 54%, rgba(255,158,0,1) 100%);
+}
